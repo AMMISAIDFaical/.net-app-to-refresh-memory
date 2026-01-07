@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Console App",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/bin/Debug/net10.0/dotnet-codespaces.dll",
+      "cwd": "${workspaceFolder}/src",
+      "console": "integratedTerminal",
+      "stopAtEntry": false,
+      "preLaunchTask": ""
+    }
+  ]
+}

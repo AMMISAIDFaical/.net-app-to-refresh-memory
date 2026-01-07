@@ -1,0 +1,15 @@
+/workspaces/.net-app-to-refresh-memory/src/bin/Debug/net10.0/src
+/workspaces/.net-app-to-refresh-memory/src/bin/Debug/net10.0/src.deps.json
+/workspaces/.net-app-to-refresh-memory/src/bin/Debug/net10.0/src.runtimeconfig.json
+/workspaces/.net-app-to-refresh-memory/src/bin/Debug/net10.0/src.dll
+/workspaces/.net-app-to-refresh-memory/src/bin/Debug/net10.0/src.pdb
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.AssemblyInfoInputs.cache
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.AssemblyInfo.cs
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.csproj.CoreCompileInputs.cache
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.sourcelink.json
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.dll
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/refint/src.dll
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.pdb
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/src.genruntimeconfig.cache
+/workspaces/.net-app-to-refresh-memory/src/obj/Debug/net10.0/ref/src.dll
