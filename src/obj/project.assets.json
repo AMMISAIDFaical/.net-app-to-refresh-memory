@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj",
+      "projectUniqueName": "/Users/faicalammisaid/Documents/projects/.net-app-to-refresh-memory/src/src.csproj",
       "projectName": "src",
-      "projectPath": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj",
+      "projectPath": "/Users/faicalammisaid/Documents/projects/.net-app-to-refresh-memory/src/src.csproj",
       "packagesPath": "/Users/faicalammisaid/.nuget/packages/",
-      "outputPath": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/obj/",
+      "outputPath": "/Users/faicalammisaid/Documents/projects/.net-app-to-refresh-memory/src/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/faicalammisaid/.nuget/NuGet/NuGet.Config"

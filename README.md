@@ -20,7 +20,7 @@ Use the official installer from Microsoft. Choose the SDK (not just the runtime)
 Download page:
 
 ```text
-https://dotnet.microsoft.com/download
+https://dotnet.microsoft.com/en-us/download
 ```
 
 ### macOS
@@ -36,6 +36,7 @@ brew install --cask dotnet-sdk
 ```bash
 dotnet --info
 ```
+![Check dotnet info output](images/check_if_dotnet_is_installed.png)
 
 ### Windows
 
@@ -52,22 +53,6 @@ https://dotnet.microsoft.com/download
 dotnet --info
 ```
 
-## Run
-
-From the repo root:
-
-```bash
-dotnet run --project src/src.csproj
-```
-
-Expected output format:
-
-```text
-Suggestions:
-<suggestion 1>
-<suggestion 2>
-...
-```
 
 ## Build
 
@@ -95,6 +80,24 @@ Edit `src/Program.cs`:
 - `src/src.csproj` — project file (target framework, build settings).
 - `src/Program.cs` — console entry point and example usage.
 - `src/IAmTheTest.cs` — interface and matcher implementation.
+
+## Run
+
+From the repo root:
+
+```bash
+dotnet run --project src/src.csproj
+```
+
+Expected output format:
+
+```text
+Suggestions:
+<suggestion 1>
+<suggestion 2>
+...
+```
+![Example run output](images/run_ex.png)
 
 ## Troubleshooting
 
