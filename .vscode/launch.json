@@ -5,7 +5,7 @@
       "name": "Run Console App",
       "type": "coreclr",
       "request": "launch",
-      "program": "${workspaceFolder}/src/bin/Debug/net10.0/dotnet-codespaces.dll",
+      "program": "${workspaceFolder}/src/bin/Debug/net10.0/src.dll",
       "cwd": "${workspaceFolder}/src",
       "console": "integratedTerminal",
       "stopAtEntry": false,

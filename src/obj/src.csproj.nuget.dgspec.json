@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/workspaces/.net-app-to-refresh-memory/src/src.csproj": {}
+    "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj": {}
   },
   "projects": {
-    "/workspaces/.net-app-to-refresh-memory/src/src.csproj": {
+    "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/workspaces/.net-app-to-refresh-memory/src/src.csproj",
+        "projectUniqueName": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj",
         "projectName": "src",
-        "projectPath": "/workspaces/.net-app-to-refresh-memory/src/src.csproj",
-        "packagesPath": "/home/codespace/.nuget/packages/",
-        "outputPath": "/workspaces/.net-app-to-refresh-memory/src/obj/",
+        "projectPath": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/src.csproj",
+        "packagesPath": "/Users/faicalammisaid/.nuget/packages/",
+        "outputPath": "/Users/faicalammisaid/Projects/testing/.net-app-to-refresh-memory/src/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/codespace/.nuget/NuGet/NuGet.Config"
+          "/Users/faicalammisaid/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.102/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

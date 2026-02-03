@@ -1,28 +1,54 @@
 # Term Suggestions (C# / .NET)
 
-A small .NET console app that demonstrates a simple “term suggestions” matcher: given an input `term`, a list of candidate `choices`, and a maximum number of results, it returns the best matches based on a lightweight character-by-character difference score.
+A small .NET console app that demonstrates a simple “term suggestions” matcher. Given an input `term`, a list of candidate `choices`, and a maximum number of results, it returns the best matches using a lightweight character-by-character difference score.
 
-## What it does
-
-The included matcher (`MatchingWithTerm`) implements the `IAmTheTest` interface and:
+## What this app does
 
 1. Filters out candidates shorter than the input term.
 2. Scores each remaining candidate by counting how many characters differ at the same index for the first `term.Length` characters.
-3. Sorts candidates by:
-	 - lowest difference score first
-	 - then shortest candidate length
+3. Sorts candidates by fewest mismatches, then by shortest length.
 4. Returns the top `numberOfSuggestions` results.
 
-In other words, it’s a strict, index-based comparison (not edit-distance / Levenshtein). It’s fast and easy to understand, but not as forgiving as true fuzzy matching.
+## Requirements
 
-## Prerequisites
+- .NET SDK that supports the target framework in `src/src.csproj` (currently `net10.0`).
 
-- .NET SDK capable of building `net10.0`
-	- In GitHub Codespaces/devcontainers, the SDK is typically preinstalled.
+## Install .NET SDK
 
-Check your SDK:
+Use the official installer from Microsoft. Choose the SDK (not just the runtime).
+
+Download page:
+
+```text
+https://dotnet.microsoft.com/download
+```
+
+### macOS
+
+1. Install with Homebrew:
 
 ```bash
+brew install --cask dotnet-sdk
+```
+
+2. Verify in a new terminal (should show SDK `10.x`):
+
+```bash
+dotnet --info
+```
+
+### Windows
+
+1. Download the Windows .NET SDK installer from:
+
+```text
+https://dotnet.microsoft.com/download
+```
+
+2. Run the installer.
+3. Open PowerShell and verify (should show SDK `10.x`):
+
+```powershell
 dotnet --info
 ```
 
@@ -31,7 +57,7 @@ dotnet --info
 From the repo root:
 
 ```bash
-dotnet run --project src/dotnet-codespaces.csproj
+dotnet run --project src/src.csproj
 ```
 
 Expected output format:
@@ -43,48 +69,43 @@ Suggestions:
 ...
 ```
 
-To change the input values, edit `src/Program.cs`:
-
-- `term` – the user input
-- `choices` – candidate strings
-- `numberOfSuggestions` – number of results to return
-
 ## Build
 
 ```bash
-dotnet build src/dotnet-codespaces.csproj
+dotnet build src/src.csproj
 ```
 
-## How the matcher is structured
+## Change inputs
 
-The matching contract is the `IAmTheTest` interface:
+Edit `src/Program.cs`:
 
-```csharp
-IEnumerable<string> GetSuggestions(string term, List<string> choices, int numberOfSuggestions);
-```
+- `term` — the user input
+- `choices` — candidate strings
+- `numberOfSuggestions` — number of results to return
 
-The current implementation is `MatchingWithTerm`. If you want to try a different strategy (e.g., prefix matching, substring matching, edit distance, phonetics), create a new class that implements `IAmTheTest` and swap it in within `Program.cs`.
+## Project files and what they do
 
-## Notes and limitations (current behavior)
-
-- Candidates shorter than `term` are removed before scoring.
-- The score counts only same-position mismatches for the first `term.Length` characters.
-- Sorting uses “fewest mismatches” and then “shortest length”.
-- The matcher currently mutates the provided `choices` list (it removes short entries). If you want pure/non-mutating behavior, pass a copy of the list into `GetSuggestions`.
-
-## Repository layout
-
-- `src/Program.cs` — console entrypoint and example usage
-- `src/IAmTheTest.cs` — interface and current matcher implementation
-- `src/dotnet-codespaces.csproj` — project file (`net10.0`)
+- `README.md` — setup, usage, and explanation of the algorithm.
+- `.net-app-to-refresh-memory.sln` — Visual Studio solution file that points to the project.
+- `.gitignore` — ignores build outputs like `bin/` and `obj/`.
+- `.github/workflows/build.yml` — GitHub Actions workflow that builds the project on pull requests.
+- `.vscode/ settings.json` — VS Code workspace setting that selects the solution file.
+- `.vscode/ tasks.json` — VS Code build task that runs `dotnet build`.
+- `.vscode/launch.json` — VS Code run configuration for the console app.
+- `src/src.csproj` — project file (target framework, build settings).
+- `src/Program.cs` — console entry point and example usage.
+- `src/IAmTheTest.cs` — interface and matcher implementation.
 
 ## Troubleshooting
 
 ### Target framework not supported
 
-If you see errors about `net10.0`, install a .NET SDK that supports it, or change `<TargetFramework>` in `src/dotnet-codespaces.csproj` to a framework you have installed (for example `net8.0`), then rebuild.
+If you see errors about `net10.0`, install a .NET SDK that supports it, or change `<TargetFramework>` in `src/src.csproj` to a framework you have installed, then rebuild.
+
+### `dotnet` command not found
+
+The .NET SDK is not installed or your terminal has not reloaded your PATH. Install the SDK, close the terminal, open a new one, and run `dotnet --info`.
 
 ### No suggestions returned
 
 Verify that your `choices` list contains strings with length >= `term.Length`, and that `numberOfSuggestions` is greater than 0.
-

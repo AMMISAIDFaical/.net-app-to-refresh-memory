@@ -19,5 +19,5 @@ jobs:
         with:
           dotnet-version: '10.0.x'
 
-      - run: dotnet restore src/src
-      - run: dotnet build src/src --no-restore --configuration Release
+      - run: dotnet restore src/src.csproj
+      - run: dotnet build src/src.csproj --no-restore --configuration Release
